@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<conio.h>
+ 
+main()
+{
+   int r;
+   long no = 0, c, res = 0, a;
+ 
+   printf("Enter the maximum range upto which you want to find armstrong numbers ");
+   scanf("%ld",&no);
+ 
+   printf("Following armstrong numbers are found from 1 to %ld\n",number);
+ 
+   for( c = 1 ; c <= no; c++ )
+   {
+      a= c;
+      while( a != 0 )
+      {
+         r = a%10;
+         res = res+ r*r*r;
+         a = a/10;
+      }
+      if ( c == res )
+         printf("%ld\n", c);
+      res = 0;
+   }
+ 
+   getch();
+   return 0;
+}
