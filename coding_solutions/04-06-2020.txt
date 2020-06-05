@@ -1,0 +1,19 @@
+defjpeg_res(filename):
+
+#openimageforreadinginbinarymode withopen(filename,'rb')asimg_file:
+
+#heightofimage(in2bytes)isat164thposition img_file.seek(163)
+
+#readthe2bytes 
+a=img_file.read(2)
+
+#calculateheight 
+height=(a[0]<<8)+a[1]
+
+#next2bytesiswidth
+a=img_file.read(2)
+
+#calculatewidth 
+width=(a[0]<<8)+a[1]
+
+print("Theresolutionoftheimageis",width,"x",height) jpeg_res("img1.jpg")
